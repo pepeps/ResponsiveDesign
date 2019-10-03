@@ -75,6 +75,7 @@ h2 {
   /* background-position-x: right; */
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 
 }
@@ -115,6 +116,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .project-course,
 .project-date,
@@ -139,17 +141,22 @@ h2 {
 
 
 .project-details {
-  width: 500px;
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
+}
+
+.project-imageContainer img {
+  max-width: 100%;
 }
 
 .header {
   background-color: #1b2127;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   height: 70px;
   align-items: center;
   justify-content: space-between;
@@ -209,6 +216,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer img {
@@ -266,6 +274,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .social {
@@ -321,11 +330,95 @@ figure {
 
 .container {
   /* border: 1px solid red; */
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+ /* body {
+    border: 1px solid green;
+  }*/
+
+}
+
+@media screen and (max-width: 767px) {
+ .header {
+   display: block;
+   height: auto;
+ }
+
+ .header ol {
+   display: block;
+ }
+
+ .header ol li {
+   height: 50px;
+ }
+
+ .header a {
+   justify-content: center;
+ }
+
+ .header .logo {
+   text-align: center;
+ }
+
+ .project {
+   display: block;
+ }
+
+ .project-details, .project-imageContainer {
+   width: auto;
+   text-align: center;
+ }
+
+ .project-details {
+   font-size: 16px;
+
+ }
+
+ .project-title {
+   font-size: 1.5em;
+   margin-bottom: .3em;
+
+ }
+ .project-url {
+  font-size: 1em;
+ }
+
+ .project-course {
+  font-size: .7em;
+
+ }
+
+ .project-description {
+  font-size: .8em;
+
+ }
+
+ .project-course, .project-date, .project-url {
+   margin: .3em;
+ }
+}
+
+@media screen and (max-width: 480px) {
+  .project-details {
+    font-size: 16px;
+ 
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+ /* body {
+    border: 1px solid purple;
+  }*/
+
 }
