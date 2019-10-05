@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -146,5 +147,27 @@
         </div>
       </div>
     </footer>
+    <script> 
+    console.log (document.querySelector('.menu'));
+
+    const menu = document.querySelector('.menu');
+    console.log(menu);
+    const burgermenu = document.querySelector('.burger-menu');
+    console.log (burgermenu);
+
+    burgermenu.addEventListener('click', hideShow);
+
+    function hideShow() {
+      if (menu.classList.contains('is-active')) {
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+
+      }
+
+    }
+
+
+    </script>
  </body>
 </html>
